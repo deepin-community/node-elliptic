@@ -1,0 +1,94 @@
+node-elliptic (6.5.4~dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 6.5.4~dfsg (Closes: CVE-2020-28498)
+  * Bump debhelper compatibility level to 13
+  * Declare compliance with policy 4.5.1
+  * Change section to javascript
+
+ -- Yadd <yadd@debian.org>  Wed, 03 Mar 2021 17:19:51 +0100
+
+node-elliptic (6.5.3~dfsg-1) unstable; urgency=high
+
+  [ upstream ]
+  * new release
+    + signature: prevent malleability and overflows
+    closes: bug#963149 (CVE-2020-13822),
+    thanks to Salvatore Bonaccorso
+
+  [ Debian Janitor ]
+  * set upstream metadata fields: Bug-Database Bug-Submit
+
+  [ Jonas Smedegaard ]
+  * set urgency=high, due to CVE fix
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 19 Jun 2020 19:34:40 +0200
+
+node-elliptic (6.5.1~dfsg-2) unstable; urgency=medium
+
+  * Mark superficial autopkgtest as such.
+  * Declare compliance with Debian Policy 4.4.1.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Wed, 02 Oct 2019 18:28:09 +0200
+
+node-elliptic (6.5.1~dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * Fix regression with newer node-bn.js
+  * Move to /usr/share
+  * Bump debhelper (no changes)
+
+ -- Bastien Roucariès <rouca@debian.org>  Wed, 04 Sep 2019 09:50:37 +0200
+
+node-elliptic (6.5.0~dfsg-1) unstable; urgency=medium
+
+  [ upstream ]
+  * New release.
+
+  [ Jonas Smedegaard ]
+  * Declare compliance with Debian Policy 4.4.0.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Mon, 15 Jul 2019 00:33:50 -0300
+
+node-elliptic (6.4.1~dfsg-1) unstable; urgency=medium
+
+  [ upstream ]
+  * New release.
+
+  [ Jonas Smedegaard ]
+  * Add git-buildpackage config:
+    + Enable pristine-tar and signed tags.
+    + Filter any .gitignore file.
+  * Update watch file:
+    + Bump watch file format version to 4.
+    + Use Github pattern.
+    + Add usage comment.
+    + Drop explicit repack
+      (implied by Files-Excluded: in copyight file when needed).
+    + Drop explicit compression format
+      (better use pristine compression when repackaging is unneeded).
+    + Use ~ (not +) as repack delimiter
+      (to leave room for eventual upstream re-release of fixed tarball).
+  * Update copyright info:
+    + Use https protocol in file format URL.
+    + Add myself to packaging Files section.
+    + Fix mention reasons for repackaging.
+    + Normalize Files-Excluded list.
+  * Update Vcs-* fields: Maintenance moved to Salsa.
+  * Relax to (build-)depend all unversioned:
+    Only recent enough releases exist in Debian.
+  * Wrap and sort control and debhelper hint files.
+  * Add DEP-3 patch header to patch.
+  * Stop build-depend on dh-buildinfo.
+  * Mark build-dependencies needed only for testsuite as such.
+  * Set Rules-Requires-Root: no.
+  * Declare compliance with Debian Policy 4.3.0.
+  * Add myself as uploader.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 10 Jan 2019 23:41:28 +0100
+
+node-elliptic (6.4.0+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #861639)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 02 May 2017 11:36:21 +0530

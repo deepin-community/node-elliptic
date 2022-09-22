@@ -1,0 +1,18 @@
+Subject: Fix error with newer node-bn.js
+author: exoego <mogami@exoego.net>
+
+key sign accepts only hexadecimal number
+
+origin: https://github.com/indutny/elliptic/commit/3d7b3b284cbc8454501f5f0d6c3560db9eaa642b.patch
+
+--- a/test/ecdsa-test.js
++++ b/test/ecdsa-test.js
+@@ -65,7 +65,7 @@
+ 
+       it('should have `signature.s <= keys.ec.nh`', function() {
+         // key.sign(msg, options)
+-        var sign = keys.sign('hello', { canonical: true });
++        var sign = keys.sign('deadbeef', { canonical: true });
+         assert(sign.s.cmp(keys.ec.nh) <= 0);
+       });
+ 

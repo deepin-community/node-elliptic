@@ -1,0 +1,5 @@
+Test-Command: node -e "require('elliptic');"
+Restrictions: superficial
+
+Test-Command: mocha -R spec
+Depends: @, @builddeps@

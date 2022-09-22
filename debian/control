@@ -1,0 +1,44 @@
+Source: node-elliptic
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders:
+ Jonas Smedegaard <dr@jones.dk>,
+ Pirate Praveen <praveen@debian.org>,
+Build-Depends:
+ debhelper-compat (= 13),
+ mocha <!nocheck>,
+ node-assert <!nocheck>,
+ node-bn.js <!nocheck>,
+ node-brorand <!nocheck>,
+ node-hash.js <!nocheck>,
+ node-hmac-drbg <!nocheck>,
+ node-inherits <!nocheck>,
+ node-minimalistic-crypto-utils <!nocheck>,
+ nodejs <!nocheck>,
+Standards-Version: 4.5.1
+Homepage: https://github.com/indutny/elliptic
+Vcs-Browser: https://salsa.debian.org/js-team/node-elliptic
+Vcs-Git: https://salsa.debian.org/js-team/node-elliptic.git
+Rules-Requires-Root: no
+
+Package: node-elliptic
+Architecture: all
+Depends:
+ node-assert,
+ node-bn.js,
+ node-brorand,
+ node-hash.js,
+ node-hmac-drbg,
+ node-inherits,
+ node-minimalistic-crypto-utils,
+ nodejs,
+ ${misc:Depends},
+Description: fast elliptic curve cryptography in pure javascript
+ Fast elliptic-curve cryptography in a plain javascript implementation.
+ .
+ Incentive for Elliptic: ECC (another library with comparable features) is
+ much slower than regular RSA cryptography, the JS implementations are even
+ more slower.
+ .
+ Node.js is an event-based server-side JavaScript engine.

@@ -1,0 +1,17 @@
+Description: use assert instead of minimalistic-assert
+Author: Pirate Praveen <praveen@debian.org>
+Forwarded: not-needed
+Last-Update: 2019-01-10
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/lib/elliptic/utils.js
++++ b/lib/elliptic/utils.js
+@@ -2,7 +2,7 @@
+ 
+ var utils = exports;
+ var BN = require('bn.js');
+-var minAssert = require('minimalistic-assert');
++var minAssert = require('assert');
+ var minUtils = require('minimalistic-crypto-utils');
+ 
+ utils.assert = minAssert;
